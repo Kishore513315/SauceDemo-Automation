@@ -1,0 +1,29 @@
+# Ignore Maven target directory
+/target/
+
+# Playwright browser binaries and cache
+/playwright/
+.playwright/
+
+# VS Code settings
+.vscode/
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS system files (just in case)
+/.DS_Store
+
+# Java class files
+*.class
+
+# Logs
+*.log
+
+# IDE-specific (just in case)
+.idea/
+
+# Environment/config files (optional)
+.env
