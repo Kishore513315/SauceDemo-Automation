@@ -20,6 +20,14 @@ public class LoginPage {
             page.locator(passwordInput).fill(password);
             page.locator(loginButton).click();
 
+            try {
+        page.waitForURL("**/inventory.html", new Page.WaitForURLOptions().setTimeout(5000));
+    } catch (Exception e) {
+        System.out.println("Login probably failed: Still on login page");
+        System.out.println("Page content: " + page.content());
+    }
+
+
         } 
 
     

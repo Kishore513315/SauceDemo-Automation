@@ -1,5 +1,8 @@
 package com.saucedemo.framework.pages;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import com.microsoft.playwright.Page;
 
 public class HomeScreenPage {
@@ -17,10 +20,30 @@ public class HomeScreenPage {
    public void addToCartMultipleItems() {
     page.locator(backPack).click();
     page.locator(bikeLight).click();
+   }
+
+    public void selectSortOption(String value) {
+    page.waitForSelector("[data-test='product-sort-container']");
+    page.locator("[data-test='product-sort-container']").selectOption(value);
+}
+
+public List<Double> getAllProductPrices() {
+    List<String> priceTexts = page.locator(".inventory_item_price").allTextContents();
+    List<Double> prices = new ArrayList<>();
+    for (String text : priceTexts) {
+        prices.add(Double.parseDouble(text.replace("$", "")));
+    }
+    return prices;
+}
+
+public List<String> getAllProductNames() {
+    return page.locator(".inventory_item_name").allTextContents();
+}
+
 
    }
    
 
 
 
-}
+
