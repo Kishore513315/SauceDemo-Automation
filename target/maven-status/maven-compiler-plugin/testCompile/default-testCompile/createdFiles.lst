@@ -1,0 +1,5 @@
+com\saucedemo\framework\tests\CartItemsTest.class
+com\saucedemo\framework\tests\SortFunctionalityTest.class
+com\saucedemo\framework\tests\TestLogin.class
+com\saucedemo\framework\base\BaseTest.class
+com\saucedemo\framework\tests\AddToCartTest.class

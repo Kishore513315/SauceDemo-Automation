@@ -1,1 +1,4 @@
+com\saucedemo\framework\pages\HomeScreenPage.class
 com\saucedemo\framework\utils\ConfigReader.class
+com\saucedemo\framework\pages\LoginPage.class
+com\saucedemo\framework\pages\CartPage.class
